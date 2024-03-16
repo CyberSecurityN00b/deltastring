@@ -27,7 +27,7 @@ def generate_deltastring(string,formula,maxiterations):
             except ZeroDivisionError:
                 pass
 
-    rgx = re.match("^([cx0-9+\-*/\(\)%&\|<>~^\s]|(int\())+$",formula)
+    rgx = re.match("^([cx0-9+\-*\(\)%&\|<>~^\s]|(int\())+$",formula)
     if rgx == None:
         raise Exception("Invalid formula presented!")
     
@@ -47,7 +47,7 @@ def generate_deltastring(string,formula,maxiterations):
         i+=1
     # There's probably a much better way to do this
     new_formula = new_formula.replace(f'x[{i-1}]',"")
-    new_formula = new_formula.replace('/',"//")
+    #new_formula = new_formula.replace('/',"//")
 
     expanded_formula = new_formula
 
