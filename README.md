@@ -22,7 +22,9 @@ _See the Formulas and Entropy sections further below._
 
 To make the deltastring a bit more dynamic, a formula needs to be provided. This formula is used to calculate the delta, meaning some formulas just won't work and some will give higher or lower entropy than others.
 
-Formulas must include at least one `c` variable and one `x` variable, as well as operations. Numbers are permitted in the formula, as well as the following mathematical operators/symbols: `+-*/()%&|<>~^`. The characters are evaluated in both Python and C, so keep this in mind (i.e., it is legal to use `||` as far as the deltastring parser is concerned, but this won't result in anything useful).
+Formulas must include at least one `c` variable and one `x` variable, as well as operations. Numbers are permitted in the formula, as well as the following mathematical operators/symbols: `+-*()%&|<>~^`. The characters are evaluated in both Python and C, so keep this in mind (i.e., it is legal to use `||` as far as the deltastring parser is concerned, but this won't result in anything useful).
+
+_Note: Division symbol removed from support for now, as it appears to be breaking things._
 
 The `c` variable represents the value of the previous character as an integer. For the first iteration, it is the value of 0.
 
