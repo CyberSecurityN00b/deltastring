@@ -33,7 +33,7 @@ The `x` variable represents a placeholder, and can be used multiple times with e
 Some formulas to get started:
   - `c * x + x` - _The original formula that helped to inspire the project._
   - `x + 13 - c` - _Demonstrates hardcoded numbers are part of a formula._
-  - `(c | 13) + (x[0] & 42) - x[1]` - _Demonstrates bitwise operators, as well as the need for parenthesis in this case._
+  - `(c | 13) + (x & 42) - x` - _Demonstrates bitwise operators, as well as the need for parenthesis in this case._
   - `(c * 0) + x + x` - _Not really a delta string, as ignores the previous characters, but useful if you want to bypass the delta concept and still generate an obfuscated string._
 
 ## Entropy
